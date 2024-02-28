@@ -39,7 +39,7 @@ public class VersioningPersonController {
         return new PersonV2(new Name("Bob", "Charlie"));
     }
 
-    // Media type versioning (a.k.a “content negotiation” or “accept header”) - GitHub
+    // Media type versioning (“content negotiation” or “accept header”) - GitHub
     @GetMapping(path = "/person/accept", produces = "application/vnd.company.app-v1+json")
     public PersonV1 getFirstVersionOfPersonAcceptHeader() {
         return new PersonV1("Bob Charlie");
